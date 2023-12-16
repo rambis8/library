@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <script src="library.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <table id="libraryTable">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Number of pages</th>
+                <th>Read</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+        </table>
+        <button id="newBookButton">NEW BOOK</button>
+        <div class="form">
+            <form id="addbookform">
+                <div>
+                    <label for="title" class="formLabel">Title</label>
+                    <input type="text" name="title" required>
+                </div>
+                <div>
+                    <label for="author" class="formLabel">Author</label>
+                    <input type="text" name="author" required>
+                </div>
+                <div>
+                    <label for="pages" class="formLabel">Pages</label>
+                    <input type="text" name="pages" required>
+                </div>
+                <fieldset>
+                    <legend>Read:</legend>
+                    <div><input type="radio" id="yes" name="read" value="yes">
+                        <label for="yes">Yes</label>
+                   <input type="radio" id="no" name="read" value="no" checked>
+                        <label for="no">No</label>
+                    </div>
+                </fieldset>
+                <div>
+                    <button type="submit">Add new book</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
