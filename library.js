@@ -102,7 +102,6 @@ function getBookId(e) {
 function changeReadStatus(e) {
   let bookId = getBookId(e);
   let selectedBook = myLibrary.find((element) => element.id === bookId);
-  // als een boek voor het eerst is toegevoegd is de status momenteel een string value en geen boolean
   let readStatus = selectedBook.read === 'true' || selectedBook.read === true;
   selectedBook.read = !readStatus;
   e.target.innerHTML = selectedBook.read ? "done" : "close";
@@ -113,7 +112,6 @@ showLibrary();
 const dialog = document.querySelector("dialog");
 const showButton = document.getElementById("newBookButton");
 const closeButton = document.getElementById("closeButton");
-// Clicking the read status should change the status in the library and icon in gui
 
 // "Show the dialog" button opens the dialog modally
 showButton.addEventListener("click", () => {
