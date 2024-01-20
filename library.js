@@ -35,15 +35,16 @@ function Book(title, author, pages, read) {
 
 function addBookToGui(book) {
   let tableRow = document.createElement("tr");
-  Object.entries(book).forEach((val) => { 
+  Object.entries(book).forEach((val) => {
     const [key, value] = val;
     let td = document.createElement("td");
     // if key == read insert icon
-    if (key ==='read') {
-        return addStatusIcon(value, td, tableRow);
-    } else { // add text value to table
-    td.innerText = value;
-    tableRow.appendChild(td);
+    if (key === "read") {
+      return addStatusIcon(value, td, tableRow);
+    } else {
+      // add text value to table
+      td.innerText = value;
+      tableRow.appendChild(td);
     }
   });
   let td = document.createElement("td");
@@ -53,19 +54,19 @@ function addBookToGui(book) {
 }
 
 function addStatusIcon(read, td, tableRow) {
-    let statusIcon = document.createElement('span');
-    statusIcon.classList.add("material-symbols-outlined");
-    statusIcon.innerHTML = read ? "done" : "close";
-    td.appendChild(statusIcon);
-    tableRow.appendChild(td);
-        td.addEventListener("click", (e) => {
-        changeReadStatus(e);
-    })
-    return;
+  let statusIcon = document.createElement("span");
+  statusIcon.classList.add("material-symbols-outlined");
+  statusIcon.innerHTML = read === 'true' ? "done" : "close";
+  td.appendChild(statusIcon);
+  tableRow.appendChild(td);
+  td.addEventListener("click", (e) => {
+    changeReadStatus(e);
+  });
+  return;
 }
 
 function createDeleteButton() {
-  let deleteButton = document.createElement('span');
+  let deleteButton = document.createElement("span");
   deleteButton.classList.add("material-symbols-outlined");
   deleteButton.innerHTML = "delete";
   deleteButton.addEventListener("click", (e) => {
@@ -78,7 +79,6 @@ function removeBookFromLibrary(e) {
   let bookId = getBookId(e);
   let clickedRow = e.target.closest("tr");
   myLibrary = myLibrary.filter((element) => element.id !== bookId);
-  console.log(myLibrary);
   clickedRow.remove();
 }
 
@@ -93,16 +93,16 @@ function showLibrary() {
 }
 
 function getBookId(e) {
-let clickedRow = e.target.closest("tr");
+  let clickedRow = e.target.closest("tr");
   let firstTd = clickedRow.querySelector("td:first-child");
   return parseInt(firstTd.textContent);
 }
 
 function changeReadStatus(e) {
-    let bookId = getBookId(e);
-    let selectedBook = myLibrary.find((element) => element.id === bookId);
-    selectedBook.read = !selectedBook.read;
-    e.target.innerHTML = selectedBook.read ? "done" : "close";
+  let bookId = getBookId(e);
+  let selectedBook = myLibrary.find((element) => element.id === bookId);
+  selectedBook.read = !(selectedBook.read === 'true');
+  e.target.innerHTML = selectedBook.read ? "done" : "close";
 }
 
 showLibrary();
@@ -111,7 +111,6 @@ const dialog = document.querySelector("dialog");
 const showButton = document.getElementById("newBookButton");
 const closeButton = document.getElementById("closeButton");
 // Clicking the read status should change the status in the library and icon in gui
-
 
 // "Show the dialog" button opens the dialog modally
 showButton.addEventListener("click", () => {
