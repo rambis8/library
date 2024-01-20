@@ -56,7 +56,8 @@ function addBookToGui(book) {
 function addStatusIcon(read, td, tableRow) {
   let statusIcon = document.createElement("span");
   statusIcon.classList.add("material-symbols-outlined");
-  statusIcon.innerHTML = read === 'true' ? "done" : "close";
+  let readStatus = read === 'true';
+  statusIcon.innerHTML = readStatus ? "done" : "close";
   td.appendChild(statusIcon);
   tableRow.appendChild(td);
   td.addEventListener("click", (e) => {
@@ -101,7 +102,9 @@ function getBookId(e) {
 function changeReadStatus(e) {
   let bookId = getBookId(e);
   let selectedBook = myLibrary.find((element) => element.id === bookId);
-  selectedBook.read = !(selectedBook.read === 'true');
+  // als een boek voor het eerst is toegevoegd is de status momenteel een string value en geen boolean
+  let readStatus = selectedBook.read === 'true' || selectedBook.read === true;
+  selectedBook.read = !readStatus;
   e.target.innerHTML = selectedBook.read ? "done" : "close";
 }
 
