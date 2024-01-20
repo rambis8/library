@@ -8,3 +8,6 @@ table {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
+#libraryTable tr td:nth-child(1), #libraryTable th:nth-child(1) {
+    display: none;
+}
