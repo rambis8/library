@@ -60,7 +60,7 @@ function addStatusIcon(read, td, tableRow) {
   statusIcon.innerHTML = readStatus ? "done" : "close";
   td.appendChild(statusIcon);
   tableRow.appendChild(td);
-  td.addEventListener("click", (e) => {
+  statusIcon.addEventListener("click", (e) => {
     changeReadStatus(e);
   });
   return;
