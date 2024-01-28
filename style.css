@@ -79,6 +79,7 @@ dialog h3 {
 fieldset {
     margin-top: 10px;
     padding-top: 10px;
+    border-radius: 8px;
 }
 
 .formField {
