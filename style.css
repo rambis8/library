@@ -1,13 +1,93 @@
+body {
+    background-color: #E8D5C6;
+}
+
+header {
+    text-align: center;
+    font-family: monospace;
+    font-size: xx-large;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    /* max-width: 500px; */
+    align-items: center;
+    justify-content: center;
+}
+
 table {
     border: 1px solid black;
-    border-collapse: collapse;
-    margin: 25px 0;
+    /* border-collapse: collapse; */
+    margin: 25px;
+    padding: 22px 18px 20px 5px;
     font-size: 0.9em;
     font-family: sans-serif;
-    min-width: 400px;
+    min-width: 600px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 25px;
 }
 
 #libraryTable tr td:nth-child(1), #libraryTable th:nth-child(1) {
     display: none;
+}
+
+#newBookButton {
+    background-color: #E8D5C6;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid black;
+}
+
+dialog {
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: center; */
+    background-color: #E8D5C6;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid black;
+}
+
+dialog h3 {
+    display: flex;
+    justify-content: center;
+}
+
+#formButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+fieldset {
+    margin-top: 10px;
+    padding-top: 10px;
+
+}
+
+.formField {
+    padding: 10px;
+}
+
+td {
+    text-align: center;
+  }
+
+th {
+    padding-bottom: 10px;
+}
+
+form {
+    font-size: 0.9em;
+    font-family: sans-serif;
 }

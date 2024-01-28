@@ -10,6 +10,9 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
+    <header>
+        <h1>Odin's library</h1>
+    </header>
     <div id="container">
         <table id="libraryTable">
             <thead>
@@ -24,19 +27,20 @@
         <tbody id="tbody">
         </tbody>
         </table>
-        <button id="newBookButton">NEW BOOK</button>
+        <button id="newBookButton">Add book</button>
         <dialog>
         <div class="form">
             <form id="addbookform">
-                <div>
+                <h3>Add new book</h3>
+                <div class="formField">
                     <label for="title" class="formLabel">Title</label>
                     <input type="text" name="title" required>
                 </div>
-                <div>
+                <div class="formField">
                     <label for="author" class="formLabel">Author</label>
                     <input type="text" name="author" required>
                 </div>
-                <div>
+                <div class="formField">
                     <label for="pages" class="formLabel">Pages</label>
                     <input type="text" name="pages" required>
                 </div>
@@ -48,7 +52,7 @@
                         <label for="read">No</label>
                     </div>
                 </fieldset>
-                <div>
+                <div id="formButtons">
                     <button id="submitButton" type="submit">Add new book</button>
                     <button id="closeButton" type="button">Close</button>
                 </div>
