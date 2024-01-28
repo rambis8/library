@@ -34,16 +34,21 @@ table {
     display: none;
 }
 
-#newBookButton {
+button {
     background-color: #E8D5C6;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid black;
+}
+
+#newBookButton {
+    
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    border-radius: 25px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    border: 1px solid black;
+
 }
 
 dialog {
@@ -68,12 +73,7 @@ dialog h3 {
 
 #formButtons button {
     padding: 10px 20px;
-    border-radius: 25px;
-    background-color: #E8D5C6;
     text-align: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    border: 1px solid black;
-    font-weight: bold;
 }
 
 fieldset {

@@ -20,10 +20,9 @@ form.addEventListener("submit", function (e) {
 
 let myLibrary = [];
 
-let hp1 = new Book("Harry Potter 1", "J.K. Rowling", 100, false);
-let hp2 = new Book("Harry Potter 2", "J.K. Rowling", 100, false);
-let hp3 = new Book("Harry Potter 3", "J.K. Rowling", 100, false);
-myLibrary.push(hp1, hp2, hp3);
+let hp1 = new Book("Art Of War", "Sun Tzu", 160, true);
+let hp2 = new Book("The Brothers Karamazov", "Fjodor Dostojevski", 1056, false);
+myLibrary.push(hp1, hp2);
 
 function Book(title, author, pages, read) {
   this.id = uniqueId++;
