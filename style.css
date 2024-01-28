@@ -47,9 +47,6 @@ table {
 }
 
 dialog {
-    /* display: flex; */
-    /* align-items: center;
-    justify-content: center; */
     background-color: #E8D5C6;
     border-radius: 25px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -69,14 +66,26 @@ dialog h3 {
   margin-bottom: 5px;
 }
 
+#formButtons button {
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #E8D5C6;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid black;
+    font-weight: bold;
+}
+
 fieldset {
     margin-top: 10px;
     padding-top: 10px;
-
 }
 
 .formField {
     padding: 10px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
 }
 
 td {
